@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-12">
+                <img src="/image/OIP.jpg" width="100%" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <nav class="nav">
+                  <a class="nav-link" href="#">Trang chủ</a>
+                  <a class="nav-link" data-toggle="modal" data-target="#modelId" href="#">đăng kí</a>
+                  <a class="nav-link " href="#">Trợ giúp</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table" id="tableHv">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã học viên</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Tiền dịch vụ</th>
+                            <th>Tiền đồ dùng</th>
+                            <th>Tổng tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                Mã sinh viên:__________________________
+            </div>
+            <div class="col-4">
+                Họ tên:__________________________
+            </div>
+            <div class="col-4">
+                Phòng thi:__________________________
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">THÔNG TIN THANH TOÁN</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="form-group row">
+                            <label for="" class="col-3">Mã học viên:</label>
+                            <input type="email" class="col-9 form-control" name="" id="mahocvien" aria-describedby="emailHelpId" placeholder="" required>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3">Họ tên:</label>
+                            <input type="email" class="col-9 form-control" name="" id="hoten" aria-describedby="emailHelpId" placeholder="" required>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3">Email</label>
+                            <input type="email" class="col-9 form-control" name="" id="email" aria-describedby="emailHelpId" placeholder="" required>
+                        </div>
+                          
+                        <div class="form-group row">
+                            <label for="" class="col-3">Dịch vụ</label>
+                            <select class="custom-select col-9" name="" onchange="OnSelectChange()" id="dichvu" required>
+                                <option value="10000" selected>Bơi</option>
+                                <option value="20000">Lặn</option>
+                                <option value="30000">Ngắm san hô</option>
+                                <option value="40000">Tắm nắm</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3">Giá tiền</label>
+                            <input type="email" class="col-9 form-control" name="" id="tiendichvu" aria-describedby="emailHelpId" placeholder="" readonly>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-4">Đồ dùng</label>
+                            <div class="form-check row">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="" onchange="OnCheckBoxChange(this)" id="" value="10000" >
+                                  Áo quần bơi
+                                </label>
+                                <br>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="" onchange="OnCheckBoxChange(this)"  id="" value="20000" >
+                                    Phao
+                                </label>
+                                <br>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="" onchange="OnCheckBoxChange(this)"  id="" value="30000">
+                                    Kính bơi
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3">Tiền đồ dùng</label>
+                            <input type="email" class="col-9 form-control" name="" id="tienDoDung" aria-describedby="emailHelpId" placeholder="" readonly>
+                        </div>
+                        
+
+                        <div class="form-group row">
+                            <label for="" class="col-3">Tổng tiền</label>
+                            <input type="email" class="col-9 form-control" name="" id="tongTien" aria-describedby="emailHelpId" placeholder="" readonly>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success col-6" onclick="OnSubmit()">Thanh toán</button>
+                <button type="button" class="btn btn-danger col-6" data-dismiss="modal">Hủy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    let tienDichVu = 0;
+    let tienDoDung = 0;
+
+    function OnSelectChange(){
+        tienDichVu = document.getElementById('dichvu').value;
+        document.getElementById('tiendichvu').value = tienDichVu;
+        UpdateSump();
+    }
+
+    function OnCheckBoxChange(e){
+        if(e.checked)
+            tienDoDung += Number(e.value);
+        else
+            tienDoDung -= Number(e.value);
+
+        document.getElementById('tienDoDung').value = tienDoDung;
+        UpdateSump();
+         
+    }
+
+    function UpdateSump(){
+        document.getElementById('tongTien').value = Number(tienDichVu) + Number(tienDoDung);
+    }
+
+   function OnSubmit(){
+    let maHocVien = document.getElementById('mahocvien').value;
+    let hoTen = document.getElementById('hoten').value;
+    let email = document.getElementById('email').value;
+        OnSelectChange();
+
+    let maHocVienPattern = /^\d{2}-\d{10}/;
+    let hoTenPattern = /^(([A-Z]){1}([a-z])+\s){2}([A-Z]){1}([a-z])+$/
+    let emailPattern = /^([A-z0-9]){1,}@iuh.edu.vn$/
+
+    if(!maHocVienPattern.test(maHocVien)){
+        alert("Mã học viên không hợp lệ !");
+        return;
+    }
+
+    if(!hoTenPattern.test(hoTen)){
+        alert("Họ tên không hợp lệ !");
+        return;
+    }
+
+    if(!emailPattern.test(email)){
+        alert("Email viên không hợp lệ !");
+        return;
+    }
+
+    let tb = document.getElementById('tableHv');
+    let row = tb.insertRow(1);
+    let c1 = row.insertCell(0);
+    let c2 = row.insertCell(1);
+    let c3 = row.insertCell(2);
+    let c4 = row.insertCell(3);
+    let c5 = row.insertCell(4);
+    let c6 = row.insertCell(5);
+    let c7 = row.insertCell(6);
+
+    c1.innerHTML = tb.rows.length + 1;
+    c2.innerHTML = maHocVien;
+    c3.innerHTML = hoTen;
+    c4.innerHTML = email;
+    c5.innerHTML = tienDichVu;
+    c6.innerHTML = tienDoDung;
+    c7.innerHTML = Number(tienDichVu) + Number(tienDoDung);
+
+   }
+</script>
+</html>
